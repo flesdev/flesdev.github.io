@@ -10,6 +10,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
 }
 /* Contenedor de las imagenes */
 .pictures-container {
@@ -115,3 +116,8 @@ html {
     height: 20px;
     margin: 10px;
 }
+/* Seccion ramdom */
+
+.ramdom-section {
+    width: 100%;
+    height: 100vh;}
