@@ -4,13 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles.css">
     <title>lesterim</title>
 </head>
 <body>
-    <p>
-    Este será mi pagina web personal! <br>
-    Espero te guste mucho. <hr>
-    With ❤️ by @lesterim.
-    </p>
+    <section class="first-section">
+        <div class="pictures-container">
+            <header class="first-section__header">
+                <div class="first-section__header--logo">lesterim</div>
+                <div class="first-section__header--nav-icon">
+                    <img src="https://i.ibb.co/4PkS1Qb/white-menu.png" alt="Menu icon">
+                </div>
+            </header>
+            <div class="first-section__main">
+                <h2 class="first-section__main--title">Frontend<br>Developer</h2>
+                <p class="first-section__main--sub-title">Lester Inga</p>
+                <div class="first-section__main--content">
+                    <button class="button" onclick="backward()">
+                        <img src="https://i.ibb.co/RHzW98H/left-arrow.png" alt="Flecha a la izquierda">
+                    </button>
+                    <button class="button-show" onclick="showCV()">Ver mi CV</button>
+                    <button class="button" onclick="forward()">
+                        <img src="https://i.ibb.co/Gccz57S/right-arrow.png" alt="Flecha a la derecha">
+                    </button>
+                </div>
+                <div class="first-section__main--arrow" onclick="otherSection()">
+                    <img src="https://i.ibb.co/tZk5Kpz/black-doble-abajo.gif"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const container = document.querySelector(".pictures-container");
+        const pictures = [
+            "https://i.ibb.co/N7wyTqh/cielo-small.jpg",
+            "https://i.ibb.co/d4hZ5t9/orilla-small.jpg",
+            "https://i.ibb.co/DQQ8Vxb/happy-Day-small.jpg",
+            "https://i.ibb.co/jyb3xjy/atardecer-small.jpg"
+        ];
+        let index = 0;
+        function forward() {
+            index++
+            if (index > pictures.length - 1) {
+                index = 0;
+            }
+            container.style.backgroundImage = `url(${pictures[index]})`;
+        };
+        function backward() {
+            index--
+            if(index < 0) {
+                index = pictures.length - 1;
+            }
+            container.style.backgroundImage = `url(${pictures[index]})`;
+        };
+        function showCV() {
+            alert("¿Interesad@? Esta funcion por ahora no la tengo lista aun :c.")
+        }
+        function otherSection() {
+            alert("Pronto nuevas secciones :'p")
+        }
+    </script>
 </body>
 </html>
+<!-- 
+https://i.ibb.co/d4hZ5t9/orilla-small.jpg
+https://i.ibb.co/xXQZrxn/orilla-original.jpg
+https://i.ibb.co/zfPvBX4/orilla-medium.jpg
+
+https://i.ibb.co/RHzW98H/left-arrow.png
+https://i.ibb.co/Gccz57S/right-arrow.png
+
+https://i.ibb.co/d5TFnjD/cielo-original.jpg
+https://i.ibb.co/1TJwbmg/cielo-medium.jpg
+https://i.ibb.co/N7wyTqh/cielo-small.jpg
+
+https://i.ibb.co/zHpCbBR/happy-Day-original.jpg
+https://i.ibb.co/09s3wNG/happy-Day-medium.jpg
+https://i.ibb.co/DQQ8Vxb/happy-Day-small.jpg
+
+https://i.ibb.co/t2d9G3h/reflexion-original.jpg
+https://i.ibb.co/TPGWffy/reflexion-medium.jpg
+https://i.ibb.co/8ctkDCj/reflexion-small.jpg
+
+https://i.ibb.co/jyb3xjy/atardecer-small.jpg
+https://i.ibb.co/9YQztCv/atardecer-medium.jpg
+https://i.ibb.co/LJGNNvb/atardecer-original.jpg
+
+https://i.ibb.co/4PkS1Qb/white-menu.png
+https://i.ibb.co/VYd8dDt/black-menu.png
+ -->
