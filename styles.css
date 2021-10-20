@@ -1,0 +1,117 @@
+/* Fuente del logo (lesterim) */
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+/* Fuente de la pagina web */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+}
+/* Contenedor de las imagenes */
+.pictures-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.ibb.co/N7wyTqh/cielo-small.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .4s;
+}
+/* FIRST SECTION */
+.first-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.first-section__header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-section__header--logo {
+    font-family: 'Festive', cursive;
+    font-size: 3rem;
+    color: white;
+    margin-left: 20px;
+}
+.first-section__header--nav-icon {
+    margin-right: 20px;
+}
+.first-section__main {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.first-section__main--title {
+    color: white;
+    font-size: 2.2rem;
+    margin-top: 90px;
+}
+.first-section__main--sub-title {
+    color: white;
+    font-size: 1.8rem;
+    margin: 60px;
+}
+.first-section__main--content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.button-show {
+    width: 90px;
+    height: 40px;
+    outline: none;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Lato', sans-serif;
+    align-self: center;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    margin: 10px;
+    font-size: 11px;
+    border: none;
+    border-radius: 50%;
+    opacity: .5;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button:hover {
+    opacity: 1;
+}
+.button img {
+    width: 12px;
+}
+.first-section__main--arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+}
+.first-section__main--arrow img {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
