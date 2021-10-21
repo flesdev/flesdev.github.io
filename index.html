@@ -13,17 +13,17 @@
     <section class="first-section">
         <div class="pictures-container">
             <header class="first-section__header">
+                <nav id="nav-menu" class="first-section__header--nav-content">
+                    <ul>
+                        <li>Home</li>
+                        <li>Ejemplo</li>
+                        <li>Ejemplo</li>
+                        <li>Ejemplo</li>
+                    </ul>
+                </nav>
                 <div class="first-section__header--logo">lesterim</div>
                 <div style="width: 18px;" class="first-section__header--nav">
                     <span id="span-menu" onclick="span()" class="first-section__header--nav-icon"><i style="color: white;" class="fas fa-bars fa-3x"></i></span>
-                    <nav id="nav-menu" class="first-section__header--nav-content">
-                        <ul>
-                            <li>Home</li>
-                            <li>Ejemplo</li>
-                            <li>Ejemplo</li>
-                            <li>Ejemplo</li>
-                        </ul>
-                    </nav>
                 </div>
             </header>
             <div class="first-section__main">
@@ -57,14 +57,14 @@
         let menu_touch = 0;
         function span() {
             let span_menu = document.getElementById("span-menu");
-                let nav_menu = document.getElementById("nav-menu");
+            let nav_menu = document.getElementById("nav-menu");
             if (menu_touch == 0) {
-                nav_menu.style.left = "calc(-100vw + 168px)";
+                nav_menu.style.left = "130px";
                 span_menu.style.position = "absolute";
                 span_menu.style.top = "-9px";
                 menu_touch = 1;
             } else {
-                nav_menu.style.left = "40px";
+                nav_menu.style.left = "calc(100vw + 10px)";
                 span_menu.style.position = "relative";
                 span_menu.style.top = "0px";
                 menu_touch = 0;
