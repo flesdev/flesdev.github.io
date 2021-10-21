@@ -104,17 +104,17 @@ html {
     width: 12px;
 }
 .first-section__main--arrow {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
     bottom: 30px;
 }
 .first-section__main--arrow img {
-    width: 20px;
-    height: 20px;
-    margin: 10px;
+    width: 18px;
+    height: 18px;
+    margin: 3px;
 }
 /* Seccion ramdom */
 
