@@ -10,42 +10,17 @@
     <script src="https://kit.fontawesome.com/a40e4f4f3e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="first-section">
-        <div class="pictures-container">
-            <header class="first-section__header">
-                <nav id="nav-menu" class="first-section__header--nav-content">
-                    <ul>
-                        <li>Home</li>
-                        <li>Ejemplo</li>
-                        <li>Ejemplo</li>
-                        <li>Ejemplo</li>
-                    </ul>
-                </nav>
-                <div class="first-section__header--logo">lesterim</div>
-                <div style="width: 18px;" class="first-section__header--nav">
-                    <span id="span-menu" onclick="span()" class="first-section__header--nav-icon"><i style="color: white;" class="fas fa-bars fa-3x"></i></span>
-                </div>
-            </header>
-            <div class="first-section__main">
-                <h2 class="first-section__main--title">Frontend<br>Developer</h2>
-                <p class="first-section__main--sub-title">Lester Inga</p>
-                <div class="first-section__main--content">
-                    <button class="button" onclick="backward()">
-                        <img src="https://i.ibb.co/RHzW98H/left-arrow.png" alt="Flecha a la izquierda">
-                    </button>
-                    <button class="button-show" onclick="showCV()">Ver X</button>
-                    <button class="button" onclick="forward()">
-                        <img src="https://i.ibb.co/Gccz57S/right-arrow.png" alt="Flecha a la derecha">
-                    </button>
-                </div>
-                <div class="first-section__main--arrow" onclick="otherSection()">
-                    <a href="#ramdom-section">
-                        <img src="https://i.ibb.co/tZk5Kpz/black-doble-abajo.gif" alt="gif"/>
-                    </a>
-                </div>
-            </div>
+    <header class="header">
+        <div class="header__cat">
+            <img src="https://i.ibb.co/25vCJHd/icons8-gato-64.png" alt="cat">
         </div>
+        <div class="header__lester"><a href="./">@lesterim</a></div>
+    </header>
+
+    <section>
+        <img id="gif1" src="https://i.ibb.co/KGRLQNp/static-Gif.png" alt="Regular Show">
     </section>
+
     <section style="font-size: 1.5rem;" class="ramdom-section" id="ramdom-section">
         <p>Este será mi pagina web personal!<br>
             Espero te guste mucho.</p><hr>
@@ -55,51 +30,14 @@
         <p>OK im back ready!</p>
     </section>
     <script>
-        let menu_touch = 0;
-        function span() {
-            let span_menu = document.getElementById("span-menu");
-            let nav_menu = document.getElementById("nav-menu");
-            if (menu_touch == 0) {
-                nav_menu.style.display = "flex";
-                nav_menu.style.left = "130px";
-                span_menu.style.position = "absolute";
-                span_menu.style.top = "-9px";
-                menu_touch = 1;
-            } else {
-                nav_menu.style.left = "calc(100vw + 10px)";
-                span_menu.style.position = "relative";
-                span_menu.style.top = "0px";
-                menu_touch = 0;
-            }
-        }
-        const container = document.querySelector(".pictures-container");
-        const pictures = [
-            "https://i.ibb.co/1TJwbmg/cielo-medium.jpg",
-            "https://i.ibb.co/zfPvBX4/orilla-medium.jpg",
-            "https://i.ibb.co/09s3wNG/happy-Day-medium.jpg",
-            "https://i.ibb.co/9YQztCv/atardecer-medium.jpg"
-        ];
-        let index = 0;
-        function forward() {
-            index++
-            if (index > pictures.length - 1) {
-                index = 0;
-            }
-            container.style.backgroundImage = `url(${pictures[index]})`;
-        };
-        function backward() {
-            index--
-            if(index < 0) {
-                index = pictures.length - 1;
-            }
-            container.style.backgroundImage = `url(${pictures[index]})`;
-        };
-        function showCV() {
-            alert("¿Interesad@? Esta funcion por ahora no la tengo lista aun :c.")
-        }
-        function otherSection() {
-            alert("Pronto nuevas secciones :'p")
-        }
+        $("#gif1").hover(
+    function() {
+        $(this).attr("src", "https://i.ibb.co/ZKccmKC/background-image-lesterimi.gif");
+    },
+    function() {
+        $(this).attr("src", "https://i.ibb.co/KGRLQNp/static-Gif.png");
+    }                         
+    );
     </script>
 </body>
 </html>
