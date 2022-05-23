@@ -1,6 +1,12 @@
 /* Fuente de la pagina web */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+:root {
+    --verde_claro: #E3FCBF;
+    --verde: #B8F1B0;
+    --verde_oscuro: #14C38E;
+    --blanco: #F7F7F7;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +20,7 @@ body, html {
 }
 /* Nuevo header */
 .header {
-    background-color: white;
+    background-color: var(--blanco);
     height: 7rem;
     width: 100%;
     display: flex;
@@ -38,10 +44,180 @@ body, html {
 .header__lester a:hover {
     text-decoration: underline;
 }
+/* -------------------- Cartoon Section ---------------------- */
+.cartoon {
+    width: 100vw;
+    height: 320px;
+    background-image: url('https://i.ibb.co/KGRLQNp/static-Gif.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cartoon:hover {
+    background-image: url('https://i.ibb.co/ZKccmKC/background-image-lesterimi.gif');
+}
 
-/* Seccion ramdom */
+/* -------------------- Presentation Section ---------------------- */
 
-.ramdom-section {
+.presentation {
+    width: 100vw;
+    height: 280px;
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.presentation__container {
+    height: 100%;
+    display: flex;
+    margin: 0 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.presentation__container h3 {
+    font-size: 3.5rem;
+}
+.presentation__container p {
+    font-size: 2rem;
+}
+
+/* -------------------- Skills Section ---------------------- */
+
+.skills {
+    width: 100vw;
+    height: 500px;
+    
+    background-color: var(--verde_claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.skills p {
+    text-align: center;
+    font-size: 2rem;
+}
+.skills__container {
     width: 100%;
-    height: 100vh;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.skills .item {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.skills .js .logo {
+    background-image: url('https://img.icons8.com/color/48/000000/javascript--v1.png');
+}
+.skills .html .logo {
+    background-image: url('https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-html-mobile-app-development-flaticons-lineal-color-flat-icons.png');
+}
+.skills .css .logo {
+    background-image: url('https://img.icons8.com/color/48/000000/css3.png');
+}
+.skills .cplus .logo {
+    background-image: url('https://img.icons8.com/nolan/64/c-plus-plus.png');
+}
+.skills .item .logo {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -------------------- Principal Project Section ---------------------- */
+
+.principal-project {
+    width: 100vw;
+    height: 400px;
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.principal-project .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: auto;
+}
+.principal-project .container .image {
+    width: 260px;
+    height: 140px;
+    background-color: antiquewhite;
+}
+.principal-project .container h3 {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+.principal-project .container p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.principal-project .container button {
+    width: 70%;
+    height: 30px;
+    margin-top: 30px;
+}
+
+/* -------------------- More projects Section ---------------------- */
+
+.more-projects {
+    width: 100vw;
+    height: auto;
+    background-color: var(--verde_claro);
+}
+.more-projects .container {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.more-projects .container .item {
+    width: 280px;
+    height: 350px;
+    background-color: var(--blanco);
+    border: 1px black solid;
+    border-radius: 25px;
+}
+
+/* -------------------- Footer Section ---------------------- */
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+}
+.footer .social-media {
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: antiquewhite;
+    align-self: center;
+}
+.footer .links {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.footer .links ul {
+    list-style: none;
+}
+.footer .links ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.footer .links ul li a:hover {
+    text-decoration: underline;
 }
