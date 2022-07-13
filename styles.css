@@ -6,6 +6,7 @@
     --verde: #B8F1B0;
     --verde_oscuro: #14C38E;
     --blanco: #F7F7F7;
+    --rojo: #FF0000;
 }
 * {
     box-sizing: border-box;
@@ -53,9 +54,9 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.cartoon:hover {
+/* .cartoon:hover {
     background-image: url('https://i.ibb.co/ZKccmKC/background-image-lesterimi.gif');
-}
+} */
 
 /* -------------------- Presentation Section ---------------------- */
 
@@ -81,21 +82,26 @@ body, html {
 .presentation__container p {
     font-size: 2rem;
 }
+.presentation__container a {
+    text-decoration: none;
+    color: var(--rojo);
+}
 
 /* -------------------- Skills Section ---------------------- */
 
 .skills {
     width: 100vw;
-    height: 500px;
+    height: auto;
     
     background-color: var(--verde_claro);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.skills p {
+.skills h3 {
     text-align: center;
     font-size: 2rem;
+    margin-top: 15px;
 }
 .skills__container {
     width: 100%;
@@ -106,8 +112,8 @@ body, html {
     justify-content: space-evenly;
 }
 .skills .item {
-    width: 300px;
-    height: 70px;
+    width: auto;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -115,13 +121,13 @@ body, html {
     background-image: url('https://img.icons8.com/color/48/000000/javascript--v1.png');
 }
 .skills .html .logo {
-    background-image: url('https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-html-mobile-app-development-flaticons-lineal-color-flat-icons.png');
+    background-image: url('https://img.icons8.com/color/48/000000/html-5--v1.png');
 }
 .skills .css .logo {
     background-image: url('https://img.icons8.com/color/48/000000/css3.png');
 }
 .skills .cplus .logo {
-    background-image: url('https://img.icons8.com/nolan/64/c-plus-plus.png');
+    background-image: url('https://i.ibb.co/z7XRSgF/c.png');
 }
 .skills .item .logo {
     width: 48px;
@@ -129,6 +135,11 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.skills .item p {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 170px;
 }
 
 /* -------------------- Principal Project Section ---------------------- */
@@ -150,8 +161,13 @@ body, html {
 }
 .principal-project .container .image {
     width: 260px;
-    height: 140px;
-    background-color: antiquewhite;
+    height: 100px;
+    background-image: url('https://i.ibb.co/GJqptpf/flimMath.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 25px;
 }
 .principal-project .container h3 {
     text-align: left;
@@ -165,8 +181,13 @@ body, html {
 }
 .principal-project .container button {
     width: 70%;
-    height: 30px;
+    height: 40px;
     margin-top: 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--rojo);
+    color: var(--blanco);
 }
 
 /* -------------------- More projects Section ---------------------- */
@@ -186,9 +207,13 @@ body, html {
 .more-projects .container .item {
     width: 280px;
     height: 350px;
+    font-size: 2rem;
     background-color: var(--blanco);
-    border: 1px black solid;
+    border: none;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------------- Footer Section ---------------------- */
@@ -203,9 +228,14 @@ body, html {
 .footer .social-media {
     width: 100px;
     height: 40px;
-    margin-top: 20px;
-    background-color: antiquewhite;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
     align-self: center;
+}
+.footer .social-media img {
+    width: 20px;
+    height: 20px;
 }
 .footer .links {
     margin-top: 40px;
@@ -217,6 +247,7 @@ body, html {
 .footer .links ul li a{
     font-size: 1.5rem;
     text-decoration: none;
+    color: black;
 }
 .footer .links ul li a:hover {
     text-decoration: underline;
